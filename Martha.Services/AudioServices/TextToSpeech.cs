@@ -1,5 +1,4 @@
-﻿#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-
+﻿#pragma warning disable CA1416 // Validate platform compatibility
 namespace Martha.Services.AudioServices
 {
     using System.Speech.Synthesis;
@@ -49,6 +48,5 @@ namespace Martha.Services.AudioServices
         }
         #endregion
     }
-
 }
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+#pragma warning restore CA1416 // Validate platform compatibility
