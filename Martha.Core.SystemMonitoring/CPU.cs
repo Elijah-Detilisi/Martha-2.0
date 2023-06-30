@@ -4,7 +4,7 @@ namespace Martha.Core.SystemMonitoring
     using System.Diagnostics;
     public class CPU
     {
-        public float GetCurrentCPUUsage()
+        public float GetCurrentUsage()
         {
             using (var cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total"))
             {
