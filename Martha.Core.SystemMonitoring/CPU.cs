@@ -2,13 +2,13 @@
 namespace Martha.Core.SystemMonitoring
 {
     using System.Diagnostics;
-    public class CPU
+    public static class CPU
     {
-        public float GetCurrentUsage()
+        public static float GetCurrentUsage()
         {
             using (var cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total"))
             {
-                float cpuUsage = cpuCounter.NextValue();
+                var cpuUsage = cpuCounter.NextValue();
                 return cpuUsage;
             }
         }
