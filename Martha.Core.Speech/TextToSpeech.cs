@@ -1,9 +1,9 @@
 ﻿#pragma warning disable CA1416 // Validate platform compatibility
-namespace Martha.Services.AudioServices
+namespace Martha.Core.Speech
 {
     using System.Speech.Synthesis;
 
-    public class TextToSpeech
+    public class TextToSpeech : IDisposable
     {
         #region Fields
         private readonly SpeechSynthesizer _speechSynthesizer;
@@ -16,32 +16,39 @@ namespace Martha.Services.AudioServices
         }
         #endregion
 
-        #region Pronouncation Methods
+        #region SpeechSynthesizer Speak
         public void Speak(string text)
         {
-            _speechSynthesizer.SpeakAsync(text);
+            try
+            {
+                _speechSynthesizer.SpeakAsync(text);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Speech synthesis failed: {ex.Message}");
+            }
         }
         #endregion
 
-        #region Cancellation Methods
-        public void Dispose()
-        {
-            _speechSynthesizer.Pause();
-            _speechSynthesizer.Dispose();
-        }
+        #region SpeechSynthesizer Cancellation
         public void StopSpeech()
         {
             _speechSynthesizer.SpeakAsyncCancelAll();
         }
+        public void Dispose()
+        {
+            _speechSynthesizer.Dispose();
+        }
         #endregion
 
         #region SpeechSynthesizer Properties
-        public int SpeechVolume
+        public int Volume
         {
             get { return _speechSynthesizer.Volume; }
             set { _speechSynthesizer.Volume = value; }
         }
-        public int SpeechRate
+
+        public int Rate
         {
             get { return _speechSynthesizer.Rate; }
             set { _speechSynthesizer.Rate = value; }
