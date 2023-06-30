@@ -5,8 +5,8 @@
     public class VoiceRecorder : IDisposable
     {
         #region Fields
-        private WaveInEvent _waveIn;
-        private WaveFileWriter _waveWriter;
+        private WaveInEvent? _waveIn;
+        private WaveFileWriter? _waveWriter;
         #endregion
 
         #region Recording
