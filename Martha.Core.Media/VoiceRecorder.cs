@@ -39,6 +39,5 @@
             _waveWriter?.Dispose();
         }
         #endregion
-
     }
 }
