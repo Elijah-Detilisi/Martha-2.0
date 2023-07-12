@@ -4,10 +4,10 @@
 
     public static class Weather
     {
-        public static async Task<string> GetForecastAsync(long x, long y)
+        public static async Task<string> GetForecastAsync(long coordX, long coordY)
         {
             var client = new HttpClient();
-            var requestUri = $"https://weatherbit-v1-mashape.p.rapidapi.com/forecast/minutely?lat={x}&lon={y}";
+            var requestUri = $"https://weatherbit-v1-mashape.p.rapidapi.com/forecast/minutely?lat={coordX}&lon={coordY}";
 
             var request = new HttpRequestMessage
             {
