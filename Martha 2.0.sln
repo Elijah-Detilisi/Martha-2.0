@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Martha.Core.SystemMonitorin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Martha.Core.Media", "Martha.Core.Media\Martha.Core.Media.csproj", "{F0C7C9EA-E9EC-4E0D-84F3-F4F697716072}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Martha.Core.Information", "Martha.Core.Information\Martha.Core.Information.csproj", "{E6087AFF-D028-4054-8D58-625B35CB6FBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Martha.Core.Information", "Martha.Core.Information\Martha.Core.Information.csproj", "{E6087AFF-D028-4054-8D58-625B35CB6FBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Martha.App", "Martha.App", "{1EDE7184-1D6B-4E97-A820-B7413204AEF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Martha.App.Utility", "Martha.App.Utility\Martha.App.Utility.csproj", "{F24730BB-D83A-432C-93BD-0C8098C3A0EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,10 @@ Global
 		{E6087AFF-D028-4054-8D58-625B35CB6FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6087AFF-D028-4054-8D58-625B35CB6FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6087AFF-D028-4054-8D58-625B35CB6FBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F24730BB-D83A-432C-93BD-0C8098C3A0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F24730BB-D83A-432C-93BD-0C8098C3A0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F24730BB-D83A-432C-93BD-0C8098C3A0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F24730BB-D83A-432C-93BD-0C8098C3A0EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +52,7 @@ Global
 		{ADDD9FBC-BE34-4C53-A167-885B1E253FDC} = {24D1774C-27C7-4DFE-A010-477269B9ED99}
 		{F0C7C9EA-E9EC-4E0D-84F3-F4F697716072} = {24D1774C-27C7-4DFE-A010-477269B9ED99}
 		{E6087AFF-D028-4054-8D58-625B35CB6FBC} = {24D1774C-27C7-4DFE-A010-477269B9ED99}
+		{F24730BB-D83A-432C-93BD-0C8098C3A0EA} = {1EDE7184-1D6B-4E97-A820-B7413204AEF6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {96F58EAF-55AB-48E4-B398-7DFB976F16D9}
