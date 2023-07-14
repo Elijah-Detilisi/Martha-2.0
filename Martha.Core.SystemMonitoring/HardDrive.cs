@@ -46,6 +46,11 @@
 
             return result;
         }
+        public long GetUsedSpace()
+        {
+            return GetTotalSize() - GetTotalFreeSpace();
+        }
+
         public string GetDriveFormat()
         {
             string result;
@@ -62,5 +67,6 @@
             return result;
         }
         #endregion
+
     }
 }
