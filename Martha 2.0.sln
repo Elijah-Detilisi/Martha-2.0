@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Martha.Core.Information", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Martha.App", "Martha.App", "{1EDE7184-1D6B-4E97-A820-B7413204AEF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Martha.App.Utility", "Martha.App.Utility\Martha.App.Utility.csproj", "{F24730BB-D83A-432C-93BD-0C8098C3A0EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Martha.App.Utility", "Martha.App.Utility\Martha.App.Utility.csproj", "{F24730BB-D83A-432C-93BD-0C8098C3A0EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Martha.App.WpfApp", "Martha.App.WpfApp\Martha.App.WpfApp.csproj", "{2459499E-DD05-466F-8929-5F3B887E8A81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{F24730BB-D83A-432C-93BD-0C8098C3A0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F24730BB-D83A-432C-93BD-0C8098C3A0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F24730BB-D83A-432C-93BD-0C8098C3A0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2459499E-DD05-466F-8929-5F3B887E8A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2459499E-DD05-466F-8929-5F3B887E8A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2459499E-DD05-466F-8929-5F3B887E8A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2459499E-DD05-466F-8929-5F3B887E8A81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{F0C7C9EA-E9EC-4E0D-84F3-F4F697716072} = {24D1774C-27C7-4DFE-A010-477269B9ED99}
 		{E6087AFF-D028-4054-8D58-625B35CB6FBC} = {24D1774C-27C7-4DFE-A010-477269B9ED99}
 		{F24730BB-D83A-432C-93BD-0C8098C3A0EA} = {1EDE7184-1D6B-4E97-A820-B7413204AEF6}
+		{2459499E-DD05-466F-8929-5F3B887E8A81} = {1EDE7184-1D6B-4E97-A820-B7413204AEF6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {96F58EAF-55AB-48E4-B398-7DFB976F16D9}
