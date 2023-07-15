@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Martha.App.Utility;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Martha.App.WpfApp
 {
@@ -20,8 +8,12 @@ namespace Martha.App.WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Personalization _personalization;
         public MainWindow()
         {
+            _personalization = new Personalization();
+            _personalization.LoadSystemStatus();
+
             InitializeComponent();
         }
     }

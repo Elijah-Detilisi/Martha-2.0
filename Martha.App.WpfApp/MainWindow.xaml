@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Martha.App.WpfApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid
+        Background="LightGray">
 
     </Grid>
 </Window>

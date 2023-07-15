@@ -8,10 +8,13 @@ namespace Martha.Core.SystemMonitoring
         {
             using (var cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total"))
             {
-                var cpuUsage = cpuCounter.NextValue();
+                float cpuUsage = cpuCounter.NextValue();
+                Thread.Sleep(1000);
+                cpuUsage = cpuCounter.NextValue();
                 return cpuUsage;
             }
         }
+
     }
 }
 #pragma warning restore CA1416 // Validate platform compatibility

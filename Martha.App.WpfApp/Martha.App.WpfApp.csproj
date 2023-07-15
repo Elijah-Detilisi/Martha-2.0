@@ -7,4 +7,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Martha.App.Utility\Martha.App.Utility.csproj" />
+  </ItemGroup>
+
 </Project>
