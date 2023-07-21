@@ -20,7 +20,7 @@
             {
                 var defaultDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia);
                 var audioEndpointVolume = defaultDevice.AudioEndpointVolume;
-                audioEndpointVolume.MasterVolumeLevelScalar = level;
+                audioEndpointVolume.MasterVolumeLevelScalar = level/100;
             }
         }
 

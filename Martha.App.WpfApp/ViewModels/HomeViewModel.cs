@@ -30,15 +30,12 @@ namespace Martha.App.WpfApp.ViewModels
         #endregion
 
         #region Init methods
-        
         public void AnnounceStartUpMessage()
         {
-            //Arrange
             string startUpMessage = String.Format("{0}. {1}.",
                 Greeting, SystemStatus
             );
 
-            //Speak
             _textToSpeech.Speak(startUpMessage);
         }
         #endregion
@@ -52,7 +49,7 @@ namespace Martha.App.WpfApp.ViewModels
         }
         private void LoadSystemStatus()
         {
-            //var ramUsage = String.Format("RAM usage is at {0}%.", RAM.GetCurrentUsage());
+            SoundLevel.SetMasterVolumeLevel(60);
             var soundLevel = String.Format("Sound levels are at {0}%", SoundLevel.GetMasterVolumeLevel());
             var internetStatus =String.Format("Computer {0} currently connected to the internet", 
                 InternetConnectivity.IsInternetAvailable() ? "is" : "is not");
