@@ -13,6 +13,7 @@ namespace Martha.App.WpfApp
         {
             _homeViewModel = new HomeViewModel();
             _homeViewModel.LoadViewModel();
+            _homeViewModel.AnnounceStartUpMessage();
             
 
             SetStartupLocation();

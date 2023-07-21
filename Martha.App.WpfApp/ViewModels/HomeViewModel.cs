@@ -31,7 +31,7 @@ namespace Martha.App.WpfApp.ViewModels
 
         #region Init methods
         
-        private void AnnounceStartUpMessage()
+        public void AnnounceStartUpMessage()
         {
             //Arrange
             string startUpMessage = String.Format("{0}. {1}.",
@@ -54,10 +54,10 @@ namespace Martha.App.WpfApp.ViewModels
         {
             //var ramUsage = String.Format("RAM usage is at {0}%.", RAM.GetCurrentUsage());
             var soundLevel = String.Format("Sound levels are at {0}%", SoundLevel.GetMasterVolumeLevel());
-            var internetStatus =String.Format("Computer {0} currently connected to internet", 
+            var internetStatus =String.Format("Computer {0} currently connected to the internet", 
                 InternetConnectivity.IsInternetAvailable() ? "is" : "is not");
             var cpuUsage = String.Format("Current CPU usage is at {0}%", CPU.GetCurrentUsage());
-            var harddrive = String.Format("Harddirve used space is at {0} gigabytes, meaning that only {1} gigabytes remains of your total {2} gigabytes",
+            var harddrive = String.Format("Harddrive used space is at {0} gigabytes, meaning that only {1} gigabytes remains of your total {2} gigabytes",
                 _hardDrive.GetUsedSpace(), _hardDrive.GetTotalFreeSpace(), _hardDrive.GetTotalSize());
             
             SystemStatus = String.Format("Your {0}. {1}. The {2}, and the {3}", 
