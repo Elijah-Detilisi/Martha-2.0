@@ -22,7 +22,7 @@
 
             if (_driveInfo.IsReady)
             {
-                result = _driveInfo.TotalSize;
+                result = _driveInfo.TotalSize / (1024 * 1024 * 1024);
             }
             else
             {
@@ -37,7 +37,7 @@
 
             if (_driveInfo.IsReady)
             {
-                result = _driveInfo.TotalFreeSpace;
+                result = _driveInfo.TotalFreeSpace / (1024 * 1024 * 1024);
             }
             else
             {

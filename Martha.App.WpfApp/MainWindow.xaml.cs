@@ -1,5 +1,4 @@
-﻿using Martha.App.Utility;
-using System.Collections.Generic;
+﻿using Martha.App.WpfApp.ViewModels;
 using System.Windows;
 
 namespace Martha.App.WpfApp
@@ -9,12 +8,12 @@ namespace Martha.App.WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Personalization _personalization;
+        private HomeViewModel _homeViewModel;
         public MainWindow()
         {
-            _personalization = new Personalization();
-            _personalization.LoadGreeting();
-            _personalization.LoadSystemStatus();
+            _homeViewModel = new HomeViewModel();
+            _homeViewModel.LoadViewModel();
+            
 
             SetStartupLocation();
 

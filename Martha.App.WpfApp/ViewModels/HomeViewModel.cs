@@ -25,20 +25,30 @@ namespace Martha.App.WpfApp.ViewModels
         #endregion
 
         #region Load Methods
-        public void LoadGreeting()
+        private void LoadGreeting()
         {
             Greeting = String.Format("Good {0} {1}, today is {2} and the time is {3}.",
                 Time.TimeOfDayText(), Username, Time.CurrentDate().ToLongDateString(), Time.CurrentTime()
             );
         }
-        public void LoadSystemStatus()
+        private void LoadSystemStatus()
         {
-            var internetStatus = InternetConnectivity.IsInternetAvailable() ? "is" : "is not";
+            //var ramUsage = String.Format("RAM usage is at {0}%.", RAM.GetCurrentUsage());
+            var soundLevel = String.Format("Sound levels are at {0}%", SoundLevel.GetMasterVolumeLevel());
+            var internetStatus =String.Format("Computer {0} currently connected to internet", 
+                InternetConnectivity.IsInternetAvailable() ? "is" : "is not");
+            var harddrive = String.Format("Harddirve used space is at {0} gigabytes, meaning that only {1} gigabytes remains of your total {2} gigabytes",
+                _hardDrive.GetUsedSpace(), _hardDrive.GetTotalFreeSpace(), _hardDrive.GetTotalSize());
+            var cpuUsage = String.Format("Current CPU usage is at {0}%", CPU.GetCurrentUsage());
 
-            SystemStatus = String.Format("Your computer {0} currently connected to internet, " + "sound levels are at {1}, " +
-                "the CPU usage is at {2}, " + "RAM usage is at {3}, " + "and {4} gigabytes of harddrive has been used.",
-                internetStatus, SoundLevel.GetMasterVolumeLevel(), CPU.GetCurrentUsage(), CPU.GetCurrentUsage(), _hardDrive.GetUsedSpace()
-            );
+            SystemStatus = String.Format("Your {0}. {1}. The {2}, and the {3}", 
+                internetStatus, soundLevel, cpuUsage, harddrive);
+        }
+
+        public void LoadViewModel()
+        {
+            LoadGreeting();
+            LoadSystemStatus();
         }
         #endregion
 

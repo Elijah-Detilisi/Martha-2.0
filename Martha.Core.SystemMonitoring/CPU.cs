@@ -9,7 +9,7 @@ namespace Martha.Core.SystemMonitoring
             using (var cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total"))
             {
                 float cpuUsage = cpuCounter.NextValue();
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
                 cpuUsage = cpuCounter.NextValue();
                 return cpuUsage;
             }

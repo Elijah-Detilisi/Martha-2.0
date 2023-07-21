@@ -8,7 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Martha.App.Utility\Martha.App.Utility.csproj" />
+    <ProjectReference Include="..\Martha.Core.Information\Martha.Core.Information.csproj" />
+    <ProjectReference Include="..\Martha.Core.Media\Martha.Core.Media.csproj" />
+    <ProjectReference Include="..\Martha.Core.Speech\Martha.Core.Speech.csproj" />
+    <ProjectReference Include="..\Martha.Core.SystemMonitoring\Martha.Core.SystemMonitoring.csproj" />
   </ItemGroup>
 
 </Project>
