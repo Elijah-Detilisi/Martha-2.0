@@ -1,9 +1,10 @@
 ﻿using Martha.Core.Information;
 using Martha.Core.SystemMonitoring;
+using System;
 
-namespace Martha.App.Utility
+namespace Martha.App.WpfApp.ViewModels
 {
-    public class Personalization
+    public class HomeViewModel
     {
         #region Fields
         private readonly HardDrive _hardDrive;
@@ -17,9 +18,9 @@ namespace Martha.App.Utility
         #endregion
 
         #region Construction
-        public Personalization()
+        public HomeViewModel()
         {
-            _hardDrive = new HardDrive(driveLetter:"C");
+            _hardDrive = new HardDrive(driveLetter: "C");
         }
         #endregion
 
@@ -32,7 +33,7 @@ namespace Martha.App.Utility
         }
         public void LoadSystemStatus()
         {
-            var internetStatus = InternetConnectivity.IsInternetAvailable()? "is" : "is not";
+            var internetStatus = InternetConnectivity.IsInternetAvailable() ? "is" : "is not";
 
             SystemStatus = String.Format("Your computer {0} currently connected to internet, " + "sound levels are at {1}, " +
                 "the CPU usage is at {2}, " + "RAM usage is at {3}, " + "and {4} gigabytes of harddrive has been used.",
